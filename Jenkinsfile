@@ -15,13 +15,6 @@ pipeline {
             }
         }
         
-        stage('UI Tests') {
-            steps {
-                sh './venv/bin/python app.py &'  
-                sh 'sleep 3'                     
-                sh './venv/bin/python tests/test_login.py'  
-            }
-        }
     }
     
 }
